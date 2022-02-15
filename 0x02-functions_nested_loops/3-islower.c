@@ -1,17 +1,20 @@
 #include "main.h"
 /**
- *funcion _islower - para recorrer los caracteres (opperlower)
- *Return : 1 por cada opperlower caraecter, 0 si otro caracter.
- */
+* _islower - check the code.
+* @c: un entero de la funcion
+* Return: Always 0.
+*/
+
 
 int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return 1;
-	}else
+		return (1);
+	}
+	else
 	{
-		return 0;
+		return (0);
 	}
 	_putchar('\n');
 }
