@@ -18,12 +18,12 @@ void jack_bauer(void)
 		{
 			mi = m / 10;
 			md = m % 10;
-			-putchar('0' + hi);
-			-putchar('0' + hd);
-			-putchar(':');
-			-putchar('0' + mi);
-			-putchar('0' + md);
-			-putchar('\n');
+			_putchar('0' + hi);
+			_putchar('0' + hd);
+			_putchar(':');
+			_putchar('0' + mi);
+			_putchar('0' + md);
+			_putchar('\n');
 		}
 	}
 }
