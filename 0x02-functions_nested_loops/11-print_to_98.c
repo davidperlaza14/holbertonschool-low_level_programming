@@ -1,4 +1,4 @@
-#include "main.n"
+#include "main.h"
 #include <stdio.h>
 /**
  *print_to_98 - Print numbers of 0 at 98
