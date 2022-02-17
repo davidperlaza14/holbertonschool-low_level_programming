@@ -2,12 +2,12 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Print if numbers are positive or negative
- * Return: Always 0
- * @i: caracters
+ * positive_or_negative - prints positive or negative int
+ * @i: parameter i
+ * Return: Always 0 (Success)
  */
 
-int positive_or_negative(int i)
+void positive_or_negative(int i)
 {
 
 	if (i > 0)
@@ -22,5 +22,4 @@ int positive_or_negative(int i)
 	{
 		printf("%d is negative\n", i);
 	}
-	return (0);
 }
