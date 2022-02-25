@@ -8,7 +8,7 @@
 
 void reverse_array(int *a, int n)
 {
-	int*p = a; /*Apunta a la cadena*/
+	int *p = a; /*Apunta a la cadena*/
 	int c = 0; /*inicio*/
 	int temp; /* Posicion temporal*/
 
