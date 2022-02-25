@@ -16,7 +16,7 @@ void reverse_array(int *a, int n)
 	while (c < n)
 	{
 		temp = *(p + c);
-		*(p + c) = *(p + c);
+		*(p + c) = *(p + n);
 		*(p + n) = temp;
 		c++;
 		n--;/*decrementa la posicion*/
