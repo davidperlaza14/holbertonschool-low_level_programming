@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strpbrk - Locate the first occurrence in a string.
  * @s: String to search.
@@ -16,7 +17,7 @@ char *_strpbrk(char *s, char *accept)
 			if (*s == *accept)
 				return (s);
 		}
-		s++
+		s++;
 	}
 	return (NULL);
 }
