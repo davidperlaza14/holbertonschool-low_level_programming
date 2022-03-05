@@ -1,7 +1,9 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-int atoi(int n);
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 int _putchar(char c);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
