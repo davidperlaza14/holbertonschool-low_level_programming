@@ -1,5 +1,7 @@
 #include "main.h"
 #include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * _argv - Evaluate *argv for special characters.
  * @s: string input.
