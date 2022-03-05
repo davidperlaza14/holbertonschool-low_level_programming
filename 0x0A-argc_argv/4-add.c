@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if (argc > 1)
 	{
-		for (c = 1; c < aegc; c++)
+		for (c = 1; c < argc; c++)
 		{
 			if (atoi(argv[c]))
 				add += atoi(argv[c]);
