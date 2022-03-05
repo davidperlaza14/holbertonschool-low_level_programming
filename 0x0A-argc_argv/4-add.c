@@ -8,7 +8,7 @@
 int _argv(char *s)
 {
 	if (!isdigit(*s))
-		return(*s++);
+		return (*s++);
 	printf("Error\n");
 	return (1);
 }
