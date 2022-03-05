@@ -8,9 +8,7 @@
 int _argv(char *s)
 {
 	if (!isdigit(*s))
-
-		return (*s++);
-
+		return(*s++);
 	printf("Error\n");
 	return (1);
 }
@@ -26,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if (argc > 1)
 	{
-		for (c = 1; c < argc; c++)
+		for (c = 1; c < aegc; c++)
 		{
 			if (atoi(argv[c]))
 				add += atoi(argv[c]);
