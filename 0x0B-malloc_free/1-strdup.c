@@ -1,12 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
-
-/* * _strdup - Duplicate a string.
+/**
+ * _strdup - Duplicate a string.
  * @str: string to duplicate
  * Return: NULL if the str is NULL,
  * and *dup_str on success.
  */
-
 char *_strdup(char *str)
 {
 	unsigned int str_size = 0;
@@ -20,7 +19,7 @@ char *_strdup(char *str)
 	else
 		return (NULL);
 	/* Allocate memory for duplicate */
-	dup_str = malloc(sizeof(char) *str_size + 1);
+	dup_str = malloc(sizeof(char) * str_size + 1);
 	/* Always ask NULL return for the malloc function */
 	if (dup_str == NULL)
 		return (NULL);
