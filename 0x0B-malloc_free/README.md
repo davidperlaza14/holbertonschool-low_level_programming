@@ -1,7 +1,7 @@
 0x0B. C - malloc, free
  By Julien Barbier
  Weight: 1
- Ongoing project - started 03-07-2022, must end by 03-09-2022 (in about 9 hours) - you're done with 0% of tasks.
+ Ongoing project - started 03-07-2022, must end by 03-09-2022 (in about 9 hours) - you're done with 60% of tasks.
  Checker was released at 03-07-2022 12:00 AM
  An auto review will be launched at the deadline
 Concepts
@@ -24,4 +24,4 @@ General
 What is the difference between automatic and dynamic allocation
 What is malloc and free and how to use them
 Why and when use malloc
-How to use valgrind to check for memory lea
+How to use valgrind to check for memory leak
