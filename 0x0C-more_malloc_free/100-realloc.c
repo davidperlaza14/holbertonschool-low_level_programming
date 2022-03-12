@@ -33,16 +33,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 	}
 	david = ptr;
-	new_ptr = malloc(new_size * sizeof(david));
-	if (!new_ptr)
+	new_prt = malloc(new_size * sizeof(david));
+	if (!new_prt)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	stiven = new_ptr;
+	stiven = new_prt;
 	for (i = 0; i < new_size && i < old_size; i++)
 		stiven[i] = *david++;
 
 	free(ptr);
-	return (new_ptr);
+	return (new_prt);
 }
