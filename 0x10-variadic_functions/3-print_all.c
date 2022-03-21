@@ -4,7 +4,7 @@
  * @format: type of data.
  * Return: nothing.
  */
-void print_all(const char * const format, ...)
+void print_all(const char *const format, ...)
 {
 	va_list args;
 	char *sval;
@@ -39,6 +39,7 @@ void print_all(const char * const format, ...)
 		}
 		if (format[counter + 1] != '\0')
 			printf(", ");
+		counter++;
 	}
 	printf("\n");
 	va_end(args);
