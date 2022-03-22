@@ -10,7 +10,7 @@ main:				;tell linker entry point
 	mov rdi, 0	        ; exit code 0
 	syscall
 
-section .data                   ;The data section is used for declaring initialized data or constants.
-
+	section .data
+	
 	msg db  'Hello, Holberton',0xa ;our dear string
 	len equ 10		       ;length of our dear string
