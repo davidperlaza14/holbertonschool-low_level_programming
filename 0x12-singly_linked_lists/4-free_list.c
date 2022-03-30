@@ -6,14 +6,15 @@
  */
 void free_list(list_t *head)
 {
-	list_t *b;
 
-	while (head)
+
+	while (head != NULL)
 	{
-		b = head;
-		head = head->next;
-		free(b->str);
+
+		head = head->str;
 		free(head);
+		head = head->next;
+
 	}
 
 }
