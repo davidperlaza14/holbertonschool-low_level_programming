@@ -90,3 +90,60 @@ void insert_sort(shash_node_t *node, shash_table_t *ht)
 	node->snext = head->snext;
 	head->snext = node;
 }
+/**
+ * shash_table_get - retrieves a value associated with a key
+ * @ht: hash table to look into
+ * @key: key of the value to retrieve
+ *
+ * Return: the value associated with the element,
+ * or NULL if key couldn’t be found
+ */
+char *shash_table_get(const shash_table_t *ht, const char *key)
+{
+	unsigned long int index;
+	shash_node_t *node = NULL;
+
+	if (!ht || !key || !strcmp(key, ""))
+		return (NULL);
+
+	index = key_index((const unsigned char *)key, ht->size);
+	node = (ht->array)[index];
+
+	while (node)
+	{
+		if (!strcmp(node->key, key))
+			return (node->value);
+		node = node->next;
+	}
+
+	return (NULL);
+}
+
+/**
+ * shash_table_print - prints a hash table
+ * @ht: hash table to print
+ */
+void shash_table_print(const shash_table_t *ht)
+{
+	shash_node_t *head = NULL;
+
+	if (!ht)
+		return;
+
+	head = ht->shead;
+
+	printf("{");
+	while (head)
+	{
+		printf("'%s': '%s'", head->key, head->value);
+		if (head->snext)
+			printf(", ");
+		head = head->snext;
+	}
+
+	printf("}\n");
+}
+/**
+ * shash_table_print_rev - prints a hash table in reverse
+ * @ht: hash table to print
+ */
