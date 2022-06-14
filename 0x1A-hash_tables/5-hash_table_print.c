@@ -1,72 +1,48 @@
 #include "hash_tables.h"
+#include <string.h>
+#include <stdio.h>
+
 /**
- *hash_table_print - prints a hash table in the order they appear
- *in the hash table array
- *@ht: pointer to the hash table
+ * hash_table_print - print a hash table
  *
- *Return: void
+ * @ht: Hash table pointer
+ *
+ * Return: Nothing
  */
+
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int iterator = 0;
-	hash_node_t *node;
-	int multiplenodes = 0;
+	unsigned long int i;
+	unsigned long int size;
+	unsigned int number_of_nodes;
+	hash_node_t *element;
+
+	i = 0;
+	number_of_nodes = 0;
 
 	if (ht == NULL)
 		return;
 
-	printf("{");
-	while (iterator < ht->size)
-	{
-		node = ht->array[iterator];
-		while (node != NULL)
-		{
-			if (multiplenodes == 0)
-			{
-				printf("'%s': '%s'", node->key, node->value);
-				multiplenodes = 1;
-			}
-			else
-				printf(", '%s': '%s'", node->key, node->value);
-			node = node->next;
-		}
-		iterator++;
-	}
-	printf("}\n");
-}
-#include "hash_tables.h"
-/**
- *hash_table_print - prints a hash table in the order they appear
- *in the hash table array
- *@ht: pointer to the hash table
- *
- *Return: void
- */
-void hash_table_print(const hash_table_t *ht)
-{
-	unsigned long int iterator = 0;
-	hash_node_t *node;
-	int multiplenodes = 0;
-
-	if (ht == NULL)
-		return;
+	size = ht->size;
 
 	printf("{");
-	while (iterator < ht->size)
+
+	for (i = 0; i < size; i++)
 	{
-		node = ht->array[iterator];
-		while (node != NULL)
+		if (ht->array[i] != NULL)
 		{
-			if (multiplenodes == 0)
+			element = ht->array[i];
+			while (element != NULL)
 			{
-				printf("'%s': '%s'", node->key, node->value);
-				multiplenodes = 1;
+				if (number_of_nodes > 0)
+					printf(", ");
+				printf("'%s': ", element->key);
+				printf("'%s'", element->value);
+				number_of_nodes++;
+				element = element->next;
 			}
-			else
-				printf(", '%s': '%s'", node->key, node->value);
-			node = node->next;
 		}
-		iterator++;
+
 	}
 	printf("}\n");
 }
