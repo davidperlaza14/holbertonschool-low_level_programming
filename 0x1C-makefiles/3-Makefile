@@ -1,10 +1,12 @@
+# Implementing more rules and variables (cleaning).
+
 CC = gcc
 SRC = main.c school.c
-OBJ = $(SRC: .C=.O)
+OBJ = $(SRC:.C=.o)
 NAME = school
 RM = rm -f
 
-all: $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
